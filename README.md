@@ -19,8 +19,10 @@ Binding an element to a data in vue is amazingly easy and simple as compared to 
 
   <body>
 
-    <div id="app">
-      {{ helloworld}}
+     <div id="app">
+      <input id="input" type="text" v-model="helloworld" />
+
+      <p>Pleased to change my scope. {{ helloworld}}</p>
     </div>
 
     <script>
@@ -33,3 +35,13 @@ Binding an element to a data in vue is amazingly easy and simple as compared to 
 
   </body>
 </html>
+
+The code above will print a hello world into the browser. What vue is doing is attach the template string to the DOM and now everything is reactive. If you open console in your browser and update the helloworld data. It will instantly be updated in the browser
+
+# Bind Directive
+
+In vue we can also do more than just interpolate text, we can bind elements with the bind directive in vue. When you run this code, you will get hello world printed.
+
+# Conditionals and Loops
+
+Suprisingly, Conditionals and Loops in vue is so simple, with the v-if directive, you can add logic to your vue web apps

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Binding</title>
+  </head>
+
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- <div id="see">
+      <span v-if="message"> Can you see me</span>
+    </div> -->
+
+    <div id="for-test">
+      <ol>
+        <li v-for="todo is todos">
+          {{ todo.text}}
+        </li>
+      </ol>
+    </div>
+
+    <script>
+      //   let conditional = new Vue({
+      //     el: "#see",
+      //     data: {
+      //       message: true,
+      //     },
+      //   });
+
+      let forapp = new Vue({
+        el: "#for-test",
+        data: {
+          todo: [
+            { text: "Learn javascript" },
+            { text: "Learn Vue" },
+            { text: "Build Something" },
+          ],
+        },
+      });
+    </script>
+  </body>
+</html>
